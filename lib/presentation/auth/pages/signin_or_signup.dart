@@ -1,8 +1,10 @@
 import 'package:build_spotify_with_flutter/common/helper/is_dark_mode.dart';
+import 'package:build_spotify_with_flutter/common/helper/navigation_service.dart';
 import 'package:build_spotify_with_flutter/common/widgets/appbar/app_bar.dart';
 import 'package:build_spotify_with_flutter/common/widgets/buttons/basic_button.dart';
 import 'package:build_spotify_with_flutter/core/config/assets/app_images.dart';
 import 'package:build_spotify_with_flutter/core/config/assets/app_vectors.dart';
+import 'package:build_spotify_with_flutter/presentation/auth/pages/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -63,7 +65,9 @@ class _SignInOrSignupPageState extends State<SignInOrSignupPage> {
                       children: [
                          Expanded(
                           flex: 1,
-                          child: BasicAppButton(onPressed: () {}, title: "Register "),
+                          child: BasicAppButton(onPressed: () {
+                            NavigationService().navigatePush(context, SignUpPage());
+                          }, title: "Register "),
                         ),
                         const Gap(20.0),
                          Expanded(
@@ -71,7 +75,7 @@ class _SignInOrSignupPageState extends State<SignInOrSignupPage> {
                           child: Text(
                             "Sign in",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: !context.isDarkMode?Colors.black:Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                            style: TextStyle(color: context.isDarkMode?Colors.white:Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ],
