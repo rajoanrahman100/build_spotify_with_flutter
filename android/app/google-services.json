@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "830588837568",
+    "project_id": "sopity-flutter",
+    "storage_bucket": "sopity-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830588837568:android:c1b8ced80877c8b92b1725",
+        "android_client_info": {
+          "package_name": "com.example.build_spotify_with_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAodohjYOnAxccMGavkRpFHWxUn1GFwMkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
